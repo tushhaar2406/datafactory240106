@@ -1,0 +1,43 @@
+{
+	"name": "dataworkspace240601_customer",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "dataworkspace240601",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlDWTable",
+		"schema": [
+			{
+				"name": "CustomerID",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Customername",
+				"type": "varchar"
+			},
+			{
+				"name": "Registered",
+				"type": "bit"
+			},
+			{
+				"name": "Courses",
+				"type": "varchar"
+			},
+			{
+				"name": "Mobile",
+				"type": "varchar"
+			},
+			{
+				"name": "City",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "Customercourse"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

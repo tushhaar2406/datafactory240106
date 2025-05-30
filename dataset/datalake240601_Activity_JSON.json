@@ -1,0 +1,19 @@
+{
+	"name": "datalake240601_Activity_JSON",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "datalake240601",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileSystem": "json"
+			}
+		},
+		"schema": {}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

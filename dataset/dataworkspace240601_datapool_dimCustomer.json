@@ -1,0 +1,32 @@
+{
+	"name": "dataworkspace240601_datapool_dimCustomer",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "dataworkspace240601",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlDWTable",
+		"schema": [
+			{
+				"name": "CustomerSK",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "CustomerID",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "CompanyName",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "dimCustomer"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

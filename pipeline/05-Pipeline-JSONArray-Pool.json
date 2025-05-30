@@ -1,0 +1,41 @@
+{
+	"name": "05-Pipeline-JSONArray-Pool",
+	"properties": {
+		"activities": [
+			{
+				"name": "01-Dataflow-CustomerJSON",
+				"type": "ExecuteDataFlow",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"dataflow": {
+						"referenceName": "03_DataFlow_JSONArrays",
+						"type": "DataFlowReference"
+					},
+					"staging": {
+						"linkedService": {
+							"referenceName": "datalake240601",
+							"type": "LinkedServiceReference"
+						},
+						"folderPath": "customer"
+					},
+					"compute": {
+						"coreCount": 8,
+						"computeType": "General"
+					},
+					"traceLevel": "Fine"
+				}
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2025-05-29T07:27:10Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}
